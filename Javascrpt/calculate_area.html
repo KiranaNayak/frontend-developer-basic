@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculate</title>
+        <style>
+            body{
+                text-align: center;
+            }
+            h2{
+                color: crimson;
+            }
+            div{
+                background-color: chocolate;
+                
+            }
+            p{
+                color: crimson;
+            }
+        </style>
+        <script>
+        function Calculate(){
+            var l=document.getElementById("length").value;
+            var w=document.getElementById("width").value;
+            var a=l*w;
+            document.getElementById("result").innerHTML="Area of rectangle="+a;
+        }
+        </script>
+    </head>
+    <body>
+        <h2>Calculate Area of Rectangle</h2>
+        <div>
+            <label for="length">Enter length:</label>
+            <input type="number" id="length"><br><br>
+            <label for="width">Enter width:</label>
+            <input type="number" id="width"><br><br>
+            <button type="submit" onclick='Calculate()'>Calculate</button>
+        </div>
+            <p id="result"></p>
+        
+    </body>
+</html>
