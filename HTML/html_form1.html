@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h2>Feedback Survey Form</h2>
+    <form>
+        <!-- Text input -->
+        <label>Name:</label><br>
+        <input type="text" name="name"><br><br>
+
+        <!-- Email input -->
+        <label>Email:</label><br>
+        <input type="email" name="email"><br><br>
+
+        <!-- Radio buttons -->
+        <label>How did you hear about us?</label><br>
+        <input type="radio" name="source"> Friends<br>
+        <input type="radio" name="source"> Internet<br>
+        <input type="radio" name="source"> Social Media<br><br>
+
+        <!-- Dropdown menu -->
+        <label>Which area would you like to improve?</label><br>
+        <select>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>Bootstrap</option>
+        </select><br><br>
+
+
+        <!-- Checkboxes -->
+        <label>What did you like? (Select multiple)</label><br>
+        <input type="checkbox"> Easy to understand<br>
+        <input type="checkbox"> Good examples<br>
+        <input type="checkbox"> Clear explanation<br><br>
+
+        <!-- Rating scale -->
+        <label>Rate your experience (1 to 5):</label><br>
+        <input type="radio" name="rating"> 1
+        <input type="radio" name="rating"> 2
+        <input type="radio" name="rating"> 3
+        <input type="radio" name="rating"> 4
+        <input type="radio" name="rating"> 5<br><br>
+
+        <!-- Textarea -->
+        <label>Additional Comments:</label><br>
+        <textarea rows="4" cols="40"></textarea><br><br>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
