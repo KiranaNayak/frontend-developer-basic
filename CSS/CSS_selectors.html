@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+
+    <style>
+        /* SIMPLE SELECTORS */
+
+        /* 1. Universal Selector */
+        * {
+            font-family: Arial;
+        }
+        /* 2. Element Selector */
+        p {
+            color: black;
+        }
+        /* 3. ID Selector */
+        #title {
+            color: darkblue;
+            text-align: center;
+        }
+        /* 4. Class Selector */
+        .important {
+            color: green;
+        }
+        /* 5. Group Selector */
+        h2, h3 {
+            color: brown;
+        }
+        /* COMBINATOR SELECTORS */
+        /* Descendant selector */
+        div p {
+            color: purple;
+        }
+
+        /* Child selector */
+        div > span {
+            color: crimson;
+        }
+        /* PSEUDO-CLASS SELECTORS */
+        a:link {
+            color: blue;
+        }
+
+        a:visited {
+            color: gray;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: green;
+        }
+
+        /* PSEUDO-ELEMENT */
+        p::first-letter {
+            font-size: 24px;
+            color: darkred;
+        }
+        /* ATTRIBUTE SELECTOR */
+        input[type="text"] {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">CSS Selectors</h1>
+
+    <h2>Simple Selectors</h2>
+    <p>This paragraph uses an element selector.</p>
+    <p class="important">This paragraph uses a class selector.</p>
+
+    <h3>Combinator Selectors</h3>
+    <div>
+        <p>This paragraph is inside a div.</p>
+        <span>This span is a direct child of div.</span>
+    </div>
+
+    <h3>Pseudo-class Selectors</h3>
+    <a href="#">Hover and click this link</a>
+
+    <br><br>
+
+    <h3>Attribute Selector</h3>
+    <label>Enter Name:</label>
+    <input type="text">
+
+</body>
+</html>
