@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+
+   
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+
+    <form>
+
+        <label>First Name:</label>
+        <input type="text" required><br><br>
+
+        <label>Last Name:</label>
+        <input type="text" required><br><br>
+
+        <label>Email Address:</label>
+        <input type="email" required><br><br>
+       
+        <label>Password:</label>
+        <input 
+            type="password"
+            required
+            minlength="8"
+            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}"
+            title="Password must contain at least 8 characters, one uppercase letter, one lowercase letter, and one number"><br><br>
+
+        <label>Confirm Password:</label>
+        <input type="password"
+            required
+            minlength="8"
+            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}"
+            title="Password must contain at least 8 characters, one uppercase letter, one lowercase letter, and one number"><br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date"><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" required> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other
+        <br><br>
+
+        <label>Country:</label>
+        <select required>
+            <option value="">Select</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+        </select><br><br>
+
+        <label>
+            <input type="checkbox" required>
+            I agree to the terms and conditions
+        </label><br><br>
+
+        <br>
+        <button type="submit">Register</button>
+
+    </form>
+
+</body>
+</html>
