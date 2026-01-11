@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tables and CSS Positioning</title>
+
+    <style>
+        * {
+            font-family: Arial;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            z-index: 10;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h2, h3 {
+            color: darkblue;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 60px;
+            width: 200px;
+            height: 100%;
+            background-color: #f4f4f4;
+            padding: 15px;
+        }
+
+        .sidebar p {
+            color: brown;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        #table-title {
+            text-align: center;
+        }
+
+        .relative-box {
+            position: relative;
+            background-color: lightblue;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .relative-box > p {
+            font-weight: bold;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: coral;
+            padding: 10px;
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 2px solid black;
+            padding: 20px;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Sticky Header
+    </header>
+
+    <div class="sidebar">
+        <p>Fixed Sidebar</p>
+        <p>Home</p>
+        <p>Tables</p>
+        <p>Layout</p>
+        <p>Position</p>
+
+    </div>
+
+    <div class="content">
+
+        <h2 id="table-title">Styled Table</h2>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Course</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Alice</td>
+                <td>HTML</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Bob</td>
+                <td>CSS</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Charlie</td>
+                <td>JavaScript</td>
+            </tr>
+        </table>
+
+        <div class="relative-box">
+            <p>Relative Container</p>
+            <div class="absolute-box">
+                Absolute Box
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal">
+        Centered Popup
+    </div>
+
+    <footer>
+        Fixed Footer
+    </footer>
+
+</body>
+</html>
