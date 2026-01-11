@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Age</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+        div{
+            background-color:navajowhite;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h2>Age Calculator</h2>
+    <label>Birth Year:</label>
+    <input type="text" id="birthYear"><br><br>
+
+    <label>Current Year:</label>    
+    <input type="text" id="currentYear"><br><br>
+
+    <button onclick="calculateAge()">Calculate Age</button>
+
+    <p id="result"></p>
+</div>
+    <script>
+        function calculateAge() {
+
+            var birthYear = document.getElementById("birthYear").value;
+            var currentYear = document.getElementById("currentYear").value;
+            birthYear = birthYear.replace(/"/g, "");
+            currentYear = currentYear.replace(/"/g, "");
+
+            birthYear = Number(birthYear);
+            currentYear = Number(currentYear);
+
+            if (isNaN(birthYear) || isNaN(currentYear)) {
+                document.getElementById("result").innerHTML = "Invalid input";
+                return;
+            }
+
+            if (birthYear > currentYear) {
+                document.getElementById("result").innerHTML = "Invalid input";
+                return;
+            }
+
+            var age = currentYear - birthYear;
+            document.getElementById("result").innerHTML =
+                "You are " + age + " years old.";
+        }
+    </script>
+</body>
+</html>
