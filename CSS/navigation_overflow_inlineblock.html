@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation, Overflow and Inline Block Practical</title>
+
+    <style>
+        body{
+            font-family: Arial;
+        }
+        .horizontal li{
+            display: inline;
+            background-color: lightblue;
+            padding: 5px;
+            margin-right: 10px;
+        }
+        .vertical li{
+            display: block;
+            background-color: lightgray;
+            padding: 5px;
+            margin: 5px;
+            width: 150px;
+        }
+        .dropdown{
+            display: inline-block;
+            background-color: lightgreen;
+            padding: 5px;
+        }
+        .dropdown-menu{
+            display: none;
+            background-color: #eee;
+            padding: 5px;
+        }
+        .dropdown:hover .dropdown-menu{
+            display: block;
+        }
+        .overflow-dropdown{
+            display: inline-block;
+            background-color: lightcoral;
+            padding: 5px;
+        }
+        .overflow-list{
+            display: none;
+            background-color: #fff;
+            width: 150px;
+            height: 70px;
+            overflow-y: scroll;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .overflow-dropdown:hover .overflow-list{
+            display: block;
+        }
+        .hamburger{
+            display: none;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            width: fit-content;
+        }
+       .responsive-menu li{
+            display: inline;
+            background-color: lightpink;
+            padding: 5px;
+            margin-right: 10px;
+        }
+        @media(max-width:600px){
+            .responsive-menu{
+                display: none;
+            }
+            .hamburger{
+                display: block;
+            }
+        }
+        .container-hide{
+            width: 220px;
+            height: 80px;
+            border: 1px solid black;
+            overflow: hidden;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .container-scroll{
+            width: 220px;
+            height: 80px;
+            border: 1px solid black;
+            overflow: scroll;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .text-block{
+            width: 220px;
+            height: 60px;
+            border: 1px solid blue;
+            overflow: auto;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .image-box{
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .inline{
+            display: inline;
+            background-color: pink;
+        }
+        .inlineblock{
+            display: inline-block;
+            width: 90px;
+            height: 35px;
+            background-color: yellow;
+            text-align: center;
+        }
+        .block{
+            display: block;
+            background-color: orange;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Horizontal Navigation Menu</h2>
+    <ul class="horizontal">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+
+    <h2>Vertical Navigation Menu</h2>
+    <ul class="vertical">
+        <li>Profile</li>
+        <li>Settings</li>
+        <li>Logout</li>
+    </ul>
+
+    <h2>Dropdown Menu</h2>
+    <div class="dropdown">
+        Courses
+        <div class="dropdown-menu">
+            HTML<br>
+            CSS<br>
+            Java<br>
+            Python
+        </div>
+    </div>
+
+    <h2>Responsive Navigation Menu</h2>
+    <p>
+        This is a responsive navigation menu. On large screens, links are shown.
+        On small screens, a menu button is shown.
+    </p>
+    <ul class="responsive-menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+    </ul>
+    <div class="hamburger">☰ Menu</div>
+    <h2>Overflow in a Container (Hidden)</h2>
+    <div class="container-hide">
+        This container has fixed size. Extra content is hidden.This container has fixed size. Extra content is hidden.This container has fixed size. Extra content is hidden.
+    </div>
+
+    <h2>Overflow in a Container (Scroll)</h2>
+    <div class="container-scroll">
+        This container has fixed size. Scrollbar is used to see extra content.This container has fixed size. Scrollbar is used to see extra content.
+    </div>
+
+    <h2>Overflow in a Text Block</h2>
+    <div class="text-block">
+        This is a text block with limited size. Overflow property controls extra text.
+    </div>
+
+    <h2>Overflow in an Image</h2>
+    <div class="image-box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0bpPo4bu1qyQahHrJ6eL2Vs-Rj2E2J1CAcQ&s">
+    </div>
+
+    <h2>Overflow in a Dropdown Menu</h2>
+    <div class="overflow-dropdown">
+        Select City
+        <div class="overflow-list">
+            Mumbai<br>
+            Delhi<br>
+            Chennai<br>
+            Bengaluru<br>
+            Hyderabad<br>
+            Pune<br>
+            Kolkata
+        </div>
+    </div>
+
+    <h2>Inline Display</h2>
+    <p>
+        Inline elements are used inside a sentence like
+        <span class="inline">INLINE</span>
+        word.
+    </p>
+    <h2>Inline-block Display</h2>
+    <p>
+        Inline-block elements allow
+        <span class="inlineblock">WIDTH</span>
+        and
+        <span class="inlineblock">HEIGHT</span>
+        inside a line.
+    </p>
+    <h2>Block Display</h2>
+    <div class="block">This is a block element</div>
+    <div class="block">This is another block element</div>
+</body>
+</html>
